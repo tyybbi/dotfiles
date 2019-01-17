@@ -18,7 +18,7 @@
 " git clone https://github.com/fatih/vim-go.git && \
 " git clone https://github.com/easymotion/vim-easymotion.git && \
 " git clone https://github.com/vim-syntastic/syntastic.git && \
-" git clone https://github.com/mfukar/robotframework-vim.git
+" git clone https://github.com/mfukar/robotframework-vim.git && \
 " git clone https://github.com/vim-scripts/Colour-Sampler-Pack.git
 " 3. Happy Vimming!
 call pathogen#infect()
