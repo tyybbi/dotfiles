@@ -1,6 +1,25 @@
 " ~/.vimrc
 "==============================================
-"Pathogen-specific
+" 1. Install Pathogen:
+" mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+" curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+" 2. Install few plugins:
+" cd ~/.vim/bundle && \
+" git clone https://github.com/tpope/vim-surround.git && \
+" git clone https://github.com/tpope/vim-fugitive.git && \
+" git clone https://github.com/tpope/vim-vinegar.git && \
+" git clone https://github.com/tpope/vim-speeddating.git && \
+" git clone https://github.com/vim-scripts/taglist.vim.git && \
+" git clone https://github.com/AndrewRadev/splitjoin.vim.git && \
+" git clone https://github.com/jlanzarotta/bufexplorer.git && \
+" git clone https://github.com/junegunn/goyo.vim.git && \
+" git clone https://github.com/vim-airline/vim-airline.git && \
+" git clone https://github.com/vim-scripts/pydoc.vim.git && \
+" git clone https://github.com/fatih/vim-go.git && \
+" git clone https://github.com/easymotion/vim-easymotion.git && \
+" git clone https://github.com/vim-syntastic/syntastic.git && \
+" git clone https://github.com/mfukar/robotframework-vim.git
+" 3. Happy Vimming!
 call pathogen#infect()
 call pathogen#helptags()
 "---- Enable Vim-features ---------------------
