@@ -19,7 +19,8 @@
 " git clone https://github.com/easymotion/vim-easymotion.git && \
 " git clone https://github.com/vim-syntastic/syntastic.git && \
 " git clone https://github.com/mfukar/robotframework-vim.git && \
-" git clone https://github.com/brafales/vim-desert256.git
+" git clone https://github.com/brafales/vim-desert256.git && \
+" git clone https://github.com/ctrlpvim/ctrlp.vim.git
 " 3. Happy Vimming!
 call pathogen#infect()
 call pathogen#helptags()
@@ -173,6 +174,7 @@ set printfont=Terminus
 "--- Mappings and abbreviations ----------------
 let mapleader = ","
 let g:mapleader = ","
+let g:ctrlp_map = "<leader>cp"
 noremap <leader>sc :SyntasticCheck<cr>
 noremap <leader>sr :SyntasticReset<cr>
 noremap <C-kPlus> <C-A>
