@@ -11,7 +11,6 @@
 " git clone https://github.com/vim-scripts/taglist.vim.git && \
 " git clone https://github.com/AndrewRadev/splitjoin.vim.git && \
 " git clone https://github.com/jlanzarotta/bufexplorer.git && \
-" git clone https://github.com/junegunn/goyo.vim.git && \
 " git clone https://github.com/vim-airline/vim-airline.git && \
 " git clone https://github.com/vim-scripts/pydoc.vim.git && \
 " git clone https://github.com/fatih/vim-go.git && \
@@ -263,6 +262,7 @@ iabb pyshe #!/usr/bin/env python<cr># -*- encoding: utf-8 -*-
 iabb bashe #!/usr/bin/env bash
 iabb peshe #!/usr/bin/env perl
 iab xdate <c-r>=strftime("%d.%m.%y %H:%M:%S")<cr>
+iab xdays <c-r>=strftime("%d.%m.%y")<cr>
 " Input en dash
 "inoremap <leader>- <C-v>u2013
 " Input em dash (rarely needed)
