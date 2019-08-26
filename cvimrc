@@ -1,0 +1,20 @@
+set localconfig
+let configpath = '/home/username/.cvimrc'
+let barposition = "bottom"
+set numerichints
+set typelinkhints
+set noautofocus
+
+let searchengine yubnub = "http://yubnub.org/parser/parse?command=%s"
+let searchalias y = "yubnub"
+
+map <C-n> nextTab
+map <C-p> previousTab
+map <C-d> scrollPageDown
+map <C-u> scrollPageUp
+map <C-f> scrollFullPageDown
+map <C-b> scrollFullPageUp
+map d closeTab
+map u lastClosedTab
+map R reloadTabUncached
+
