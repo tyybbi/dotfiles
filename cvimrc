@@ -3,6 +3,8 @@ let configpath = '/home/username/.cvimrc'
 let barposition = "bottom"
 set numerichints
 set typelinkhints
+set nohud
+set nosmoothscroll
 set noautofocus
 
 let searchengine yubnub = "http://yubnub.org/parser/parse?command=%s"
