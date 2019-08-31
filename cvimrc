@@ -28,7 +28,16 @@ map gu :viewsource!<cr>
 map gU goToRootUrl
 map <C-j> <cr>
 map <C-c> <esc>
+map å lastUsedTab
 
 map <leader>e :tabnew chrome://extensions<cr>
 map <leader>s :tabnew chrome://settings<cr>
+
+imap <C-a> beginningOfLine
+imap <C-e> endOfLine
+imap <C-u> deleteToBeginning
+imap <C-k> deleteToEnd
+imap <C-w> deleteWord
+imap <C-f> forwardChar
+imap <C-b> backwardChar
 
