@@ -261,8 +261,8 @@ cnoremap <C-g>  <C-c>
 iabb pyshe #!/usr/bin/env python<cr># -*- encoding: utf-8 -*-
 iabb bashe #!/usr/bin/env bash
 iabb peshe #!/usr/bin/env perl
-iab xdate <c-r>=strftime("%d.%m.%y %H:%M:%S")<cr>
-iab xdays <c-r>=strftime("%d.%m.%y")<cr>
+iab xdate <c-r>=strftime("%d.%m.%y %H:%M:%S")<cr>]<esc>2Bi[<esc>$
+iab xdays <c-r>=strftime("%d.%m.%y")<cr>]<esc>Bi[<esc>$
 " Input en dash
 "inoremap <leader>- <C-v>u2013
 " Input em dash (rarely needed)
