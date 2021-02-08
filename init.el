@@ -23,9 +23,9 @@
 ; Disable auto save
 (setq auto-save-default nil)
 ; Unclutter UI (done in ~/.Xdefaults instead)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(menu-bar-mode -1)
+;(tool-bar-mode -1)
+;(scroll-bar-mode -1)
+;(menu-bar-mode -1)
 ; Don't blink cursor
 (blink-cursor-mode -1)
 ; Enable rainbow mode by default
@@ -82,9 +82,15 @@
 
 ;; Packages stuff
 (require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(setq package-enable-at-startup nil)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (package-initialize)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(package-refresh-contents)
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
 
 ; Uncomment 1 col below when sbcl is installed again.
 ;;; Set up the Common Lisp environment
@@ -154,9 +160,9 @@
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
 ; Enable surround.el
-(add-to-list 'load-path "~/.emacs.d/evil-surround")
-(require 'evil-surround)
-(global-evil-surround-mode 1)
+;(add-to-list 'load-path "~/.emacs.d/evil-surround")
+;(require 'evil-surround)
+;(global-evil-surround-mode 1)
 
 ; Some custom mappings for Evil
 (define-key evil-normal-state-map ",a" 'org-agenda)
