@@ -53,6 +53,7 @@ if has("autocmd")
     autocmd Filetype java setlocal omnifunc=javacomplete#Complete
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType go setlocal noexpandtab
+    autocmd FileType yaml setlocal ai ts=2 sw=2 et
 " vim-go mappings
     autocmd FileType go nmap <leader>r <Plug>(go-run)
     autocmd BufRead,BufNewFile *.memo setlocal filetype=memo
