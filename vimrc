@@ -54,14 +54,15 @@ if has("autocmd")
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType go setlocal noexpandtab
     autocmd FileType yaml setlocal ai ts=2 sw=2 et
+    autocmd FileType yml setlocal ai ts=2 sw=2 et
 " vim-go mappings
     autocmd FileType go nmap <leader>r <Plug>(go-run)
     autocmd BufRead,BufNewFile *.memo setlocal filetype=memo
     autocmd BufRead,BufNewFile *.csd setlocal filetype=csound
     autocmd BufRead,BufNewFile *.ly setlocal filetype=lilypond
     autocmd BufRead,BufNewFile .zaliases setlocal filetype=sh
-    autocmd BufRead,BufNewFile *.html setlocal sw=2
-    autocmd BufRead,BufNewFile *.tex setlocal sw=2
+    autocmd BufRead,BufNewFile *.html setlocal sw=2 ts=2
+    autocmd BufRead,BufNewFile *.tex setlocal sw=2 ts=2
 endif
 "------
 setlocal completefunc=javacomplete#CompleteParamsInfo
