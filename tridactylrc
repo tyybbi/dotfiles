@@ -1,0 +1,10 @@
+set hintnames numeric
+set hintfiltermode vimperator-reflow
+set hintdelay 10
+set searchurls.y http://yubnub.org/parser/parse?command=%s
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+bind ,<Space> nohlsearch
+
