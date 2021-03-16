@@ -16,7 +16,6 @@
 " git clone https://github.com/fatih/vim-go.git && \
 " git clone https://github.com/easymotion/vim-easymotion.git && \
 " git clone https://github.com/vim-syntastic/syntastic.git && \
-" git clone https://github.com/mfukar/robotframework-vim.git && \
 " git clone https://github.com/brafales/vim-desert256.git && \
 " git clone https://github.com/ctrlpvim/ctrlp.vim.git
 "---- Enable Vim-features ---------------------
