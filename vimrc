@@ -268,7 +268,8 @@ iab xdays <c-r>=strftime("%d.%m.%y")<cr>]<esc>Bi[<esc>$
 "inoremap <leader>- <C-v>u2013
 " Input em dash (rarely needed)
 "inoremap <leader>-- <C-v>u2014
-nnoremap <leader>t ciW[TODO]<esc>
+nnoremap <leader>t i[TODO]<esc>
 nnoremap <leader>d ciW[DONE]<esc>
 nnoremap <leader>f ciW[FIXME]<esc>
+nnoremap <leader>x ciW[FIXED]<esc>
 
