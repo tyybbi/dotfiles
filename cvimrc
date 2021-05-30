@@ -1,5 +1,5 @@
 set localconfig
-let configpath = '/home/username/.cvimrc'
+let configpath = '/home/{{ usernam }}/.cvimrc'
 let barposition = "bottom"
 set numerichints
 set typelinkhints
