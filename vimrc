@@ -183,7 +183,7 @@ set wrap
 "set lbr
 set ch=1
 "set clipboard=unnamed
-set mouse=a
+set mouse=r
 set mousehide
 set wildmenu
 set wildmode=list:longest,full
