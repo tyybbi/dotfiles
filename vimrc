@@ -17,7 +17,8 @@
 " git clone https://github.com/easymotion/vim-easymotion.git && \
 " git clone https://github.com/vim-syntastic/syntastic.git && \
 " git clone https://github.com/brafales/vim-desert256.git && \
-" git clone https://github.com/ctrlpvim/ctrlp.vim.git
+" git clone https://github.com/ctrlpvim/ctrlp.vim.git && \
+" git clone https://github.com/takelley1/ansible-doc.vim.git
 "---- Enable Vim-features ---------------------
 set nocompatible
 "---- Auto-change to working directory --------
@@ -221,6 +222,8 @@ let g:mapleader = ","
 let g:ctrlp_map = "<leader>cp"
 noremap <leader>sc :SyntasticCheck<cr>
 noremap <leader>sr :SyntasticReset<cr>
+nnoremap <leader>ad :AnsibleDocSplit<cr><c-l>
+nnoremap <leader>av :AnsibleDocVSplit<cr><c-l>
 noremap <C-kPlus> <C-A>
 nnoremap <F5> :set invpaste paste?<cr>
 imap <F5> <C-O><F5>
