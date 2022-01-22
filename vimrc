@@ -16,9 +16,13 @@
 " git clone https://github.com/fatih/vim-go.git && \
 " git clone https://github.com/easymotion/vim-easymotion.git && \
 " git clone https://github.com/vim-syntastic/syntastic.git && \
-" git clone https://github.com/brafales/vim-desert256.git && \
+" git clone https://github.com/lifepillar/vim-solarized8.git && \
 " git clone https://github.com/ctrlpvim/ctrlp.vim.git && \
-" git clone https://github.com/takelley1/ansible-doc.vim.git
+" git clone https://github.com/tpope/vim-commentary.git && \
+" git clone https://github.com/pearofducks/ansible-vim.git && \
+" git clone https://github.com/takelley1/ansible-doc.vim.git && \
+" git clone https://github.com/neoclide/coc.nvim.git
+" Note! CoC needs node, yarn etc installed
 "---- Enable Vim-features ---------------------
 set nocompatible
 "---- Auto-change to working directory --------
@@ -39,7 +43,8 @@ set t_ut=
 syntax on
 highlight TrailingWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match TrailingWhitespace /\s\+$/
-colorscheme desert256
+set bg=dark
+colorscheme solarized8
 set completeopt=menuone,longest,preview
 "Pydoc-specific
 let g:pydoc_open_cmd = 'vsplit'
@@ -53,8 +58,8 @@ if has("autocmd")
     autocmd Filetype java setlocal omnifunc=javacomplete#Complete
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType go setlocal noexpandtab
-    autocmd FileType yaml setlocal ai ts=2 sw=2 et
-    autocmd FileType yml setlocal ai ts=2 sw=2 et
+" coc-ansible needs this
+    autocmd FileType yaml,yml setlocal ft=yaml.ansible ai ts=2 sw=2 et
 " vim-go mappings
     autocmd FileType go nmap <leader>r <Plug>(go-run)
     autocmd BufRead,BufNewFile *.memo setlocal filetype=memo
@@ -133,6 +138,10 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+" coc-ansible needs this
+"let g:coc_filetype_map = {
+"  \ 'yaml.ansible': 'ansible',
+"  \ }
 " Statusline tweaks (shows when vim-airline gets deleted)
 set noruler
 set laststatus=2
