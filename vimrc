@@ -22,7 +22,10 @@
 " git clone https://github.com/pearofducks/ansible-vim.git && \
 " git clone https://github.com/takelley1/ansible-doc.vim.git && \
 " git clone https://github.com/neoclide/coc.nvim.git
-" Note! CoC needs node, yarn etc installed
+" Note! CoC needs node, yarn etc installed, also:
+" :CocInstall @yaegassy/coc-ansible
+" :CocInstall coc-go
+" :CocInstall coc-pyright
 "---- Enable Vim-features ---------------------
 set nocompatible
 "---- Auto-change to working directory --------
@@ -137,6 +140,7 @@ let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
+let g:airline_symbols.readonly = 'RO'
 let g:airline_symbols.whitespace = 'Ξ'
 " coc-ansible needs this
 "let g:coc_filetype_map = {
@@ -167,6 +171,7 @@ hi User5 ctermfg=11 ctermbg=0
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap \c :set cursorline! <cr>
+nnoremap \C :set cursorcolumn! <cr>
 "--------------------------------------------
 set magic
 set nobackup
@@ -193,6 +198,7 @@ set wrap
 "set lbr
 set ch=1
 "set clipboard=unnamed
+" With -clipboard, have to mouse=r instead of mouse=a to enable copy/paste
 set mouse=r
 set mousehide
 set wildmenu
@@ -231,6 +237,7 @@ let g:mapleader = ","
 let g:ctrlp_map = "<leader>cp"
 noremap <leader>sc :SyntasticCheck<cr>
 noremap <leader>sr :SyntasticReset<cr>
+" Needs ansible-doc
 nnoremap <leader>ad :AnsibleDocSplit<cr><c-l>
 nnoremap <leader>av :AnsibleDocVSplit<cr><c-l>
 noremap <C-kPlus> <C-A>
@@ -253,12 +260,14 @@ vnoremap "C <esc>`>a */<esc>`<i/* <esc>
 vnoremap "L <esc>`>a --]]<esc>`<i--[[ <esc>
 vnoremap "U <esc>`>3x<esc>`<3x<esc>
 inoremap <leader>// /*  */<esc>2hi
-nnoremap <leader>mm :!pandoc -o %:r.html %<cr>
-nnoremap <leader>mh :!pandoc -o %.tmp % && iconv -f utf-8 -t iso-8859-1 %.tmp > %:r.html && rm %.tmp<cr>
+nnoremap <leader>mh :!pandoc -o %:r.html %<cr>
+"nnoremap <leader>mh :!pandoc -o %.tmp % && iconv -f utf-8 -t iso-8859-1 %.tmp > %:r.html && rm %.tmp<cr>
+"nnoremap <leader>mp :!pandoc -H $HOME/path/to/deeplists.tex -o %:r.pdf %<cr>
 inoremap <leader>oo {<cr>}<esc>ko
+inoremap <leader>c ```
+nnoremap <leader>c i```<esc>
 nnoremap <leader>T :TlistToggle<cr>
 nnoremap <leader>E :Vexplore<cr>
-"nnoremap <leader>U :Utl<cr>
 "Emacs-style navigation in Command mode
 cnoremap <C-a>  <Home>
 cnoremap <C-b>  <Left>
@@ -276,6 +285,7 @@ iabb bashe #!/usr/bin/env bash
 iabb peshe #!/usr/bin/env perl
 iab xdate <c-r>=strftime("%d.%m.%y %H:%M:%S")<cr>]<esc>2Bi[<esc>$
 iab xdays <c-r>=strftime("%d.%m.%y")<cr>]<esc>Bi[<esc>$
+"nnoremap <leader>latex :set paste<cr>i---<cr>title:<cr>author:<cr>lang: en<cr>date: \today<cr>documentclass: article<cr>classoption: a4paper<cr>geometry: "left=1.2cm,right=1.2cm,top=2cm,bottom=2cm"<cr>fontfamily: fourier<cr>linkcolor: blue<cr>output:<cr>  pdf_document:<cr>    toc: true<cr>    toc_depth: 6<cr>---<cr><cr>\tableofcontents<cr><esc>:set nopaste<cr>
 " Input en dash
 "inoremap <leader>- <C-v>u2013
 " Input em dash (rarely needed)
