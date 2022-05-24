@@ -280,9 +280,8 @@ cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 cnoremap <Esc>d <S-right><Delete>
 cnoremap <C-g>  <C-c>
-iabb pyshe #!/usr/bin/env python<cr># -*- encoding: utf-8 -*-
+iabb pyshe #!/usr/bin/env python3
 iabb bashe #!/usr/bin/env bash
-iabb peshe #!/usr/bin/env perl
 iab xdate <c-r>=strftime("%d.%m.%y %H:%M:%S")<cr>]<esc>2Bi[<esc>$
 iab xdays <c-r>=strftime("%d.%m.%y")<cr>]<esc>Bi[<esc>$
 "nnoremap <leader>latex :set paste<cr>i---<cr>title:<cr>author:<cr>lang: en<cr>date: \today<cr>documentclass: article<cr>classoption: a4paper<cr>geometry: "left=1.2cm,right=1.2cm,top=2cm,bottom=2cm"<cr>fontfamily: fourier<cr>linkcolor: blue<cr>output:<cr>  pdf_document:<cr>    toc: true<cr>    toc_depth: 6<cr>---<cr><cr>\tableofcontents<cr><esc>:set nopaste<cr>
