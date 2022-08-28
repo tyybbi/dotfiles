@@ -233,6 +233,8 @@ noremap <leader>sc :SyntasticCheck<cr>
 noremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>ad :AnsibleDocSplit<cr><c-l>
 nnoremap <leader>av :AnsibleDocVSplit<cr><c-l>
+" coc wants this to complete with <cr>
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 noremap <C-kPlus> <C-A>
 nnoremap <F5> :set invpaste paste?<cr>
 imap <F5> <C-O><F5>
