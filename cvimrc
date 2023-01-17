@@ -10,8 +10,8 @@ set nolinkanimations
 set ignorecase
 set smartcase
 
-let searchengine yubnub = "http://yubnub.org/parser/parse?command=%s"
-let searchalias y = "yubnub"
+"let searchengine yubnub = "https://yubnub.org/parser/parse?command=%s"
+"let searchalias y = "yubnub"
 let mapleader = ","
 
 unmap <C-w>
