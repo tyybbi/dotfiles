@@ -55,6 +55,8 @@ let g:pydoc_highlight=0
 let g:pydoc_use_drop=1
 "Easymotion mapping: press SPACE and 2 characters of interest
 map <space> <Plug>(easymotion-s2)
+"If fzf installed via Git to ~/.fzf
+"set rtp+=~/.fzf
 "--------------------------------------------
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -291,8 +293,4 @@ iab xdays <c-r>=strftime("%d.%m.%y")<cr>]<esc>Bi[<esc>$
 "inoremap <leader>- <C-v>u2013
 " Input em dash (rarely needed)
 "inoremap <leader>-- <C-v>u2014
-nnoremap <leader>t i[TODO]<esc>
-nnoremap <leader>d ciW[DONE]<esc>
-nnoremap <leader>f ciW[FIXME]<esc>
-nnoremap <leader>x ciW[FIXED]<esc>
-
+nnoremap <leader>F :FZF!<cr>
