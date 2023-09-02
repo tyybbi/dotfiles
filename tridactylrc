@@ -1,12 +1,19 @@
 " Needs :nativeinstall
-" Still keep this as a note
-set hintnames numeric
+"set hintnames numeric
+"set hintfiltermode vimperator-reflow
+set hintnames short
+set hintuppercase false
+set hintchars jklasdfhgyuiopqwertnmzxcvb
 set hintfiltermode vimperator-reflow
 set hintdelay 10
-set searchurls.y https://yubnub.org/parser/parse?command=%s
+set searchengine google
+set searchurls.ddg https://duckduckgo.com/?q=
+set searchurls.g https://www.google.com/search?q=
+set searchurls.yt https://www.youtube.com/results?search_query=
 bind / fillcmdline find
 bind ? fillcmdline find -?
 bind n findnext 1
-bind N findnext -1
+bind N findnext -? 1
 bind ,<Space> nohlsearch
 
+" vim: filetype=vim :
