@@ -1,9 +1,7 @@
 " Needs :nativeinstall
-"set hintnames numeric
-"set hintfiltermode vimperator-reflow
-set hintnames short
-set hintuppercase false
-set hintchars jklasdfhgyuiopqwertnmzxcvb
+"set hintuppercase false
+"set hintchars jklasdfhgyuiopqwertnmzxcvb
+set hintnames numeric
 set hintfiltermode vimperator-reflow
 set hintdelay 10
 set searchengine google
