@@ -1,4 +1,5 @@
 " Needs :nativeinstall
+" or just run these settings in the browser
 "set hintuppercase false
 "set hintchars jklasdfhgyuiopqwertnmzxcvb
 set hintnames numeric
