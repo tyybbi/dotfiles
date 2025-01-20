@@ -29,3 +29,5 @@
     grep = false
 [rebase]
     autosquash = true
+[core]
+    editor = nvim
